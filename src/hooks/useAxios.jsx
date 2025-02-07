@@ -4,24 +4,24 @@ import axios from 'axios'
 const useAxios = (url) => {
   const [data, setData] = useState([])
   const [error, setError] = useState(null)
-  const [loaded, setLoaded] = useState(false)
+  const [loading, setLoading] = useState(false)
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        setLoaded(true)
+        setLoading(true)
         const response = await axios(url)
         setData(response.data)
       } catch (error) {
         setError(error)
       } finally {
-        setLoaded(false)
+        setLoading(false)
       }
     }
     fetchData()
   }, [url])
 
-  return [data, error, loaded]
+  return [data, error, loading]
 }
 
 export default useAxios

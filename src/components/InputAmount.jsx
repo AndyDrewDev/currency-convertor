@@ -3,13 +3,13 @@ import { useContext } from 'react'
 import { CurrencyContext } from '../context/CurrencyContext'
 
 const InputAmount = () => {
-  const { firstAmount, setfirstAmount } = useContext(CurrencyContext)
+  const { firstAmount, setFirstAmount } = useContext(CurrencyContext)
 
   return (
     <Grid item xs={12} md>
       <TextField
-      value={firstAmount}
-      onChange={e => setfirstAmount(e.target.value)}
+        value={firstAmount}
+        onChange={(e) => setFirstAmount(e.target.value)}
         label='Amount'
         fullWidth
         InputProps={{

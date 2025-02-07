@@ -1,11 +1,10 @@
 import { Grid, Autocomplete, TextField, Skeleton } from '@mui/material'
 import useAxios from '../hooks/useAxios'
 
-const SelectCountry = (props) => {
-  const { value, setValue, label } = props
-  const [data, loaded, error] = useAxios('https://restcountries.com/v3.1/all')
+const SelectCountry = ({ value, setValue, label }) => {
+  const [data, loading, error] = useAxios('https://restcountries.com/v3.1/all')
 
-  if (loaded) {
+  if (loading) {
     return (
       <Grid item xs={12} md={3}>
         <Skeleton variant='rounded' height={60} />
