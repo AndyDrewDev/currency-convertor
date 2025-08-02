@@ -2,7 +2,7 @@ import { Grid, Autocomplete, TextField, Skeleton } from '@mui/material'
 import useAxios from '../hooks/useAxios'
 
 const SelectCountry = ({ value, setValue, label }) => {
-  const [data, loading, error] = useAxios('https://restcountries.com/v3.1/all')
+  const [data, loading, error] = useAxios('https://restcountries.com/v3.1/all?fields=name,currencies,flag')
 
   if (loading) {
     return (
