@@ -11,7 +11,7 @@ const BoxStyle = {
   color: '#222',
   minHeight: '20rem',
   borderRadius: 2,
-  marginTop: '10rem',
+  marginTop: '4rem',
   padding: '4rem 2rem',
   boxShadow: '0px 10px 15px -3px rgba(0,0,0,0.1);',
   position: 'relative',
